@@ -44,7 +44,7 @@ const WeatherApp = () => {
       const controller = new AbortController();
       setTimeout(() => controller.abort(), 4000);
 
-      const URL = `http://api.weatherapi.com/v1/current.json?key=57844db9cda94c9b9da230744231003&q=${name}&aqi=no`;
+      const URL = `https://api.weatherapi.com/v1/current.json?key=57844db9cda94c9b9da230744231003&q=${name}&aqi=no`;
 
       const res = await fetch(URL, { signal: controller.signal });
 
