@@ -44,9 +44,7 @@ const WeatherApp = () => {
       const controller = new AbortController();
       setTimeout(() => controller.abort(), 4000);
 
-      const URL = `${import.meta.env.VITE_URL_API}key=${
-        import.meta.env.VITE_API_KEY
-      }&q=${name}&aqi=no`;
+      const URL = `http://api.weatherapi.com/v1/current.json?key=57844db9cda94c9b9da230744231003&q=${name}&aqi=no`;
 
       const res = await fetch(URL, { signal: controller.signal });
 
